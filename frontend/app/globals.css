@@ -1,0 +1,208 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-[#FAF5F0];
+    position: relative;
+    background-color: #FAF5F0;
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@import 'tailwindcss';
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes gh-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(36, 0, 61, 0.12);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(36, 0, 61, 0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* MetaMask Bold Color Palette */
+:root {
+  --color-cream: #FAF5F0;
+  --color-purple: #24003D;
+  --color-coral: #FF6B35;
+  --color-lime: #C8F135;
+  --color-black: #1A1A1A;
+  --color-mint: #A8F0C6;
+  --color-lavender: #D4B8FF;
+  --color-peach: #FFB8A0;
+  --color-gray-light: #E8E0D8;
+}
+
+@layer components {
+  .card {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+  }
+
+  .btn-primary {
+    background-color: #24003D;
+    color: white;
+    border-radius: 50px;
+    padding: 12px 32px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #1a0028;
+    transform: translateY(-2px);
+  }
+
+  .text-heading {
+    font-family: var(--font-big-shoulders);
+    color: #24003D;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+
+  /* Colored card backgrounds */
+  .card-mint {
+    background: #A8F0C6;
+  }
+
+  .card-lavender {
+    background: #D4B8FF;
+  }
+
+  .card-peach {
+    background: #FFB8A0;
+  }
+
+  .card-coral {
+    background: #FF6B35;
+  }
+
+  .card-lime {
+    background: #C8F135;
+  }
+
+  /* Fade-up animation */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hover lift for cards */
+  .card-hover-lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card-hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(36, 0, 61, 0.12);
+  }
+
+  /* Drag-over effect for upload dropzone */
+  .drag-over {
+    border-color: #FF6B35 !important;
+    background: rgba(255, 107, 53, 0.04) !important;
+  }
+
+  .drag-over .upload-icon {
+    animation: bounce-arrow 0.6s infinite;
+  }
+
+  /* GitHub pulse */
+  .github-pulse {
+    animation: gh-pulse 3.5s ease infinite;
+  }
+
+  /* Risk badge slide-in */
+  .risk-badge {
+    animation: slide-in 0.4s ease forwards;
+  }
+
+  /* CTA button hover */
+  .cta-button {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #3D0066;
+    transform: scale(1.02);
+  }
+}
+
+
