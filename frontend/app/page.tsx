@@ -204,6 +204,7 @@ export default function VerifyLens() {
 
     setLoadStep(0)
     setIsAnalyzing(true)
+    console.log('API URL:', process.env.NEXT_PUBLIC_API_URL)  // ✅ move it here, outside fetch
 
     try {
       const formData = new FormData()
