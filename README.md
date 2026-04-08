@@ -5,7 +5,7 @@
 
 ### AI Food Images Authenticity Detection 🔍
 
-Mirova helps you determine whether an image is **real or AI-generated** — with confidence scores, visual analysis, and a clean, intuitive interface.
+Mirova helps you determine whether an image is **real or AI-generated**  with confidence scores, visual analysis,& a clean, intuitive interface.
 
 </div>
 
