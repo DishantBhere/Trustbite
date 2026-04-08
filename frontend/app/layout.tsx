@@ -19,7 +19,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Mirova - AI Image Authenticity Detection',
   description: 'Detect AI-generated images in seconds with Mirova.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
@@ -27,7 +26,7 @@ export const metadata: Metadata = {
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/icon-dark-32x32.ico',
         media: '(prefers-color-scheme: dark)',
       },
       {
